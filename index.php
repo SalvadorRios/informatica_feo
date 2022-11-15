@@ -16,7 +16,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
             <h1>INGENIERÍA INFORMÁTICA </h1>
             <p>Ingenio y Creación en Movimiento</p>
             <div class="arrowDiv">
-                <a href="#one" class="scrolly">Bienvenida</a>
+                <a href="#one" class="scrolly">Bienvenidos</a>
                 <img class=" arrow" src="./assets/img/arrow.png">
             </div>
         </div>

@@ -8,20 +8,25 @@ h2,p{
     color: #fff !important;
 }
 /* es un titulo */
+form{
+    background: cornflowerblue;
+    padding: 10px;
+}
+
 .titulo{
     border-bottom: solid 1px blue;
     padding-bottom: 15px;
     font-size: 25px;
     text-align: center;
     margin-bottom: 3%;
-    color: white;
+    color: #000;
 }
 .subTitulo{
     border-bottom: solid 1px blue;
     padding-bottom: 10px;
     font-size: 20px;
     margin-bottom: 1%;
-    color: white;
+    color: #000;
     width: 60%;
 }
 .tiDocentes{
@@ -38,7 +43,7 @@ h2,p{
 }
 .textoCarrera{
     text-align: justify;
-    color:#fff;
+    color:#000;
     margin: 5%;
 }
 .CarreraCard{
@@ -61,10 +66,13 @@ h2,p{
     padding: 15px 20px;
     border: 10px solid transparent;
 }
+.container p{
+    color: #fff;
+}
 .texto1{
     width: 90%;
     text-align: justify;
-    color: white;
+    color: #fff;
     font-size: 25px;
     margin: auto;
     padding-top: 45px;
@@ -72,7 +80,7 @@ h2,p{
     margin-bottom: 50px;
 }
 .barras{
-    color:white;
+    color:#000;
 }
 .contText{
     width: 100%;
@@ -101,7 +109,7 @@ h2,p{
     width: 100%;
     margin: auto;
     /* background: linear-gradient(155deg, rgba(2,0,36,1) 20%, rgba(23,22,69,1) 50%, rgba(2,0,36,1) 80%); */
-    background: white;
+    background: #000;
 }
 .hero-area {
     height: 1650px;
@@ -113,11 +121,10 @@ h2,p{
 .contContact{
     width: 80%;
     margin: auto;
-    color: #fff;
+    color: #000;
 }
 .contactColor{
     /* background-color: currentColor; */
-    background: linear-gradient(155deg, rgba(2,0,36,1) 20%, rgba(23,22,69,1) 50%, rgba(2,0,36,1) 80%);
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -431,7 +438,6 @@ canvas {
 
 /* galeria */
 .containerGrid {
-    background:#D1DBBD;
     width:90%;
     margin: 0 auto;
     padding:40px;
@@ -492,7 +498,6 @@ canvas {
         color: rgb(6, 106, 117);
         text-transform: uppercase;
         font-size: 100%;
-        background:#3E606F;
         /*background:#282828;*/
         font-family: Arial, sans-serif;
         padding: 3em;
@@ -517,7 +522,6 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #3E606F;
     -webkit-perspective: 1000px;
             perspective: 1000px;
     -webkit-transform-style: preserve-3d;
@@ -565,7 +569,7 @@ canvas {
     left: 50%;
     -webkit-transform: translate(-50%,-50%) rotateX(90deg);
             transform: translate(-50%,-50%) rotateX(90deg);
-    color: #fff;
+    color: #000;
 }
 
 #ground {

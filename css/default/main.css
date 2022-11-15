@@ -3334,11 +3334,13 @@ input, select, textarea {
 		background-image: url(../../assets/img/data2.jpg);
 		align-items: center;
 		justify-content: center;
-		width: 90%;
-		margin: 50px auto;
+		margin-bottom: 50px;
+	}
+	#banner p{
+		color: #fff;
 	}
 
-		#banner h2 {
+		#banner h2{
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
@@ -3354,6 +3356,7 @@ input, select, textarea {
 			position: relative;
 			z-index: 1;
 			margin: 0px;
+			color: #fff;
 		}
 
 			#banner h2:before, #banner h2:after {
