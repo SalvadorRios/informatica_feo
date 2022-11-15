@@ -127,7 +127,7 @@ h2,p{
     position: relative;
     width: 240px;
     height: 450px;
-    background: rgba(0, 0, 0, 0.5);;
+    background: rgba(0, 0, 0, 0.7);;
     margin: 40px 30px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);;
     border-radius: 15px;
@@ -212,11 +212,6 @@ h2,p{
 }
 .containerCard{
     display: flex;
-}
-.contCards{
-    /* background-color: currentColor; */
-    /* background: linear-gradient(155deg, rgba(2,0,36,1) 20%, rgba(23,22,69,1) 50%, rgba(2,0,36,1) 80%); */
-    background: linear-gradient(326deg, rgba(15,10,189,1) 0%, rgb(62 150 255) 100%);
 }
 
 .modal-content{
@@ -421,12 +416,12 @@ canvas {
     margin: 0;
     padding: 0 !important;
 }
-.valoresBack{
+.features, .valoresBackHead{
     background-color: rgb(100 124 157) !important;
 }
-.valoresBackHead{
+/* .valoresBackHead{
     background-color: rgb(30 72 143) !important;
-}
+} */
 .perfilIngreso{
     margin: auto !important;
 }
@@ -626,6 +621,16 @@ from{
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
 }
+}
+.arrow{
+    width: 3% !important;
+}
+.arrowDiv{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* alumnos */

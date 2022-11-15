@@ -15,8 +15,11 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <div class="container">
             <h1>INGENIERÍA INFORMÁTICA </h1>
             <p>Ingenio y Creación en Movimiento</p>
+            <div class="arrowDiv">
+                <a href="#one" class="scrolly">Bienvenida</a>
+                <img class=" arrow" src="./assets/img/arrow.png">
+            </div>
         </div>
-        <a href="#one" class="more scrolly">Bienvenida</a>
     </section>
 
 
@@ -69,6 +72,5 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     <!-- ========== Hero End ========== -->
 
 </div>
-
 
 <?php include_once "../informatica/vistas/footer/footer.php"; ?>

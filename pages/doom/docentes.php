@@ -1,6 +1,5 @@
 <div id="particles-foreground" class="vertical-centered-box"></div>
 <div class="contCards">
-    <h3 class="titulo tiDocentes">Docentes</h3>
     <div class="team">
         <div class="row containerCard" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
             <?php                            
