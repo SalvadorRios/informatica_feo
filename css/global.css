@@ -259,6 +259,14 @@ canvas {
 
 /* laptop */
 @media (max-width: 1366px)  {
+
+    /* logos */
+.logo{
+    width: 7%;
+}
+.logoTesch{
+    width: 7%;
+}
     .textoCarrera{
         text-align: justify;
         color:#fff;
@@ -438,7 +446,7 @@ canvas {
 
 /* galeria */
 .containerGrid {
-    width:90%;
+    width:99%;
     margin: 0 auto;
     padding:40px;
     border-radius:15px;
