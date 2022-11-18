@@ -5,11 +5,11 @@
     font-family:Arial, Helvetica, sans-serif;
 } */
 h2,p{
-    color: #fff !important;
+    color: #fff
 }
 /* es un titulo */
 form{
-    background: cornflowerblue;
+    background: #F4F4F4;
     padding: 10px;
 }
 
@@ -33,10 +33,16 @@ form{
     padding-top: 50px;
 }
 .form-control{
-    background-color:rgba(255, 255, 255, 0.05);
+    background-color: #F4F4F4;
+}
+.contacto-input{
+    color: #000 !important;
 }
 .form-group{
     margin: 15px;
+}
+.kontakto{
+    color:#000;
 }
 .contactoo{
     font-size: 20px;
