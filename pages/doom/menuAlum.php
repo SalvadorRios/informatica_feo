@@ -34,7 +34,7 @@
             </h2>
             <div id="panelsStayOpen-collapseReciden" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingReciden">
             <div class="accordion-body">
-                <a class="btn btn-dark" href="<?php echo "Alumnos.php?Page=" . 'Recidencias'?>">Recidencias</a>
+                <a class="btn btn-dark" href="<?php echo "Alumnos.php?Page=" . 'Recidencias'?>">Recidensias</a>
             </div>
             </div>
         </div>

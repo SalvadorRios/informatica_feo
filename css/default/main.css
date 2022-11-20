@@ -3329,7 +3329,7 @@ input, select, textarea {
 
 	#banner {
 		display: flex;
-		height: 20vh;
+		height: 35vh;
 		text-align: center;
 		background-image: url(../../assets/img/data2.jpg);
 		align-items: center;

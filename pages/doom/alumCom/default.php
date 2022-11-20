@@ -10,80 +10,31 @@
                 </div>
             </section>
 
-        <!-- One -->
-            <section id="one" class="wrapper style1 special">
-                <div class="inner">
-                    <header class="major">
-                        <h2>Arcu aliquet vel lobortis ata nisl<br />
-                        eget augue amet aliquet nisl cep donec</h2>
-                        <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-                        fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-                    </header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="../../../../informatica/assets/img/data2.jpg" class="d-block w-100" alt="data2.jpg">
                 </div>
-            </section>
-
-        <!-- Two -->
-            <section id="two" class="wrapper alt style2">
-                <section class="spotlight">
-                    <div class="image"><img src="../../../../informatica/assets/img/default/pic01.jpg" alt="" /></div><div class="content">
-                        <h2>Magna primis lobortis<br />
-                        sed ullamcorper</h2>
-                        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-                    </div>
-                </section>
-                <section class="spotlight">
-                    <div class="image"><img src="../../../../informatica/assets/img/default/pic02.jpg" alt="" /></div><div class="content">
-                        <h2>Tortor dolore feugiat<br />
-                        elementum magna</h2>
-                        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-                    </div>
-                </section>
-                <section class="spotlight">
-                    <div class="image"><img src="../../../../informatica/assets/img/default/pic03.jpg" alt="" /></div><div class="content">
-                        <h2>Augue eleifend aliquet<br />
-                        sed condimentum</h2>
-                        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-                    </div>
-                </section>
-            </section>
-
-        <!-- Three -->
-            <section id="three" class="wrapper style3 special">
-                        <div class="inner">
-                            <header class="major">
-                                <h2>Accumsan mus tortor nunc aliquet</h2>
-                                <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-                                fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-                            </header>
-                            <ul class="features">
-                                <li>
-                                    <h3>Arcu accumsan</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                                <li>
-                                    <h3>Ac Augue Eget</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                                <li>
-                                    <h3>Mus Scelerisque</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                                <li >
-                                    <h3>Mauris Imperdiet</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                                <li >
-                                    <h3>Aenean Primis</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                                <li >
-                                    <h3>Tortor Ut</h3>
-                                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                                </li>
-                            </ul>
-                        </div>
-            </section>
-
-
+                <div class="carousel-item">
+                <img src="../../../../informatica/assets/img/data2.jpg" class="d-block w-100" alt="data2.jpg">
+                </div>
+                <div class="carousel-item">
+                <img src="../../../../informatica/assets/img/data2.jpg" class="d-block w-100" alt="data2.jpg">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 </div>
