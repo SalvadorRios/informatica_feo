@@ -1,3 +1,50 @@
+<?php
+// error_reporting(0);
+
+include('../../../informatica/conexiones/conexion-list.php');
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
+
+$buscar = "SELECT * FROM carrera";
+$resultado = $conexion->prepare($buscar);
+$resultado->execute();
+$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+
+$buscar2 = "SELECT * FROM carre_div2";
+$resultado2 = $conexion->prepare($buscar2);
+$resultado2->execute();
+$data2=$resultado2->fetchAll(PDO::FETCH_ASSOC);
+
+$buscar3 = "SELECT * FROM carre_div3";
+$resultado3 = $conexion->prepare($buscar3);
+$resultado3->execute();
+$data3=$resultado3->fetchAll(PDO::FETCH_ASSOC);
+
+$buscar4 = "SELECT * FROM carre_div5";
+$resultado4 = $conexion->prepare($buscar4);
+$resultado4->execute();
+$data4=$resultado4->fetchAll(PDO::FETCH_ASSOC);
+
+
+echo 'ptm reacciona';
+foreach($data as $dat) { 
+echo $dat['titulo'];
+}
+
+// foreach($data2 as $dat2) { 
+// echo $dat2['id'];
+// }
+
+// foreach($data3 as $dat3) { 
+// echo $dat3['id'];
+// }
+
+// foreach($data4 as $dat4) { 
+// echo $dat4['id'];
+// }
+
+?>
+?>
 <div class="landing is-preload">
     <!-- Page Wrapper -->
     <div id="page-wrapper">
@@ -5,7 +52,9 @@
         <!-- Banner -->
             <section id="banner">
                 <div class="inner">
-                    <h2>Carrera</h2>
+                    <?php foreach($data as $dat) { ?>
+                        <h2><?php $dat['titulo'] ?></h2>
+                    <?php } ?>
                 </div>
             </section>
 
@@ -13,10 +62,10 @@
             <section id="one" class="wrapper style1 special">
                 <div class="inner">
                     <header class="filosofia major">
-                        <h2>Filosofía del Programa Educativo</h2>
-                        <p>Objetivo General:  Formar profesionales competentes en el diseño, desarrollo, implementación y administración de servicios informáticos y gestión de proyectos con una visión sistémica, tecnológica y estratégica, ofreciendo soluciones innovadoras e integrales a las organizaciones, de acuerdo con las necesidades globales, actuales y emergentes, comprometidos con su entorno, desempeñándose con actitud ética, emprendedora y de liderazgo.</p>
-                        <p>Misión Institucional: Ofrecer servicios de educación superior tecnológica de calidad, con cobertura nacional, pertinente y equitativa, que coadyuve a la conformación de una sociedad más justa y humana.</p>
-                        <p>Misión del Programa Educativo: Formar profesionales en el área de Ingeniería Informática con criterios éticos y humanistas, que apliquen soluciones basadas en las Tecnologías de la información, con el fin de generar desarrollo, innovación y crecimiento económico a las organizaciones, fortaleciendo la responsabilidad social.</p>
+                    <?php foreach($data as $dat) { ?>
+                        <h2><?php $dat['ti_div1'] ?></h2>
+                        <p><?php $dat['cont_div1'] ?></p>
+                    <?php } ?>
                     </header>
                 </div>
             </section>
@@ -26,7 +75,9 @@
             <section id="three" class="valoresBack wrapper style3 special">
                             <div class="inner">
                                 <header class="valoresBackHead major">
-                                    <h2 class="valores">Valores Institucionales</h2>
+                                <?php foreach($data as $dat) { ?>
+                                    <h2 class="valores"><?php $dat['ti_div2'] ?></h2>
+                                <?php } ?>
                                 </header>
                                 <ul class="features">
                                     <li>
