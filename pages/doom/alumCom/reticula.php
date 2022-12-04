@@ -1,14 +1,10 @@
 <?php
 error_reporting(0);
 
-include('../../informatica/conexiones/conexion-list.php');
-$objeto = new Conexion();
-$conexion = $objeto->Conectar();
-
-$buscar = "SELECT * FROM reticulas";
-$resultado = $conexion->prepare($buscar);
-$resultado->execute();
-$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+$buscarR = "SELECT * FROM reticulas";
+$resultadoR = $conexion->prepare($buscarR);
+$resultadoR->execute();
+$dataR=$resultadoR->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <div class="landing is-preload">
@@ -30,23 +26,23 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                         </header>
                         <ul class="features">
                             <?php                            
-                                foreach($data as $dat) {                                                
+                                foreach($dataR as $datR) {                                                
                             ?>
-                            <li>
-                                <h3><?php echo $dat['titulo'] ?></h3>
+                                <li>
+                                    <h3><?php echo $datR['titulo'] ?></h3>
                                     <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $dat['clave'] ?>">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $datR['clave'] ?>">
                                         Ver Reticula Generica
                                         </button>
                                     <!-- Modal -->
-                                        <div class="modal fade" id="<?php echo $dat['clave'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="<?php echo $datR['clave'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <iframe src="../../../informatica/assets/reticulas/<?php echo $dat['nombre'] ?>" frameborder="0"></iframe>
+                                                    <iframe src="../../../informatica/assets/reticulas/<?php echo $datR['nombre'] ?>" frameborder="0"></iframe>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -54,7 +50,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                                 </div>
                                             </div>
                                         </div>
-                            </li>
+                                </li>
                             <?php } ?>
                         </ul>
                     </div>

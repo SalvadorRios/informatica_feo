@@ -1,14 +1,10 @@
 <?php
 error_reporting(0);
 
-include('../../informatica/conexiones/conexion-list.php');
-$objeto = new Conexion();
-$conexion = $objeto->Conectar();
-
-$buscar = "SELECT * FROM calendario";
-$resultado = $conexion->prepare($buscar);
-$resultado->execute();
-$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+$buscarC = "SELECT * FROM calendario";
+$resultadoC = $conexion->prepare($buscarC);
+$resultadoC->execute();
+$dataC=$resultadoC->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -41,9 +37,9 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                         </div>
                                         <div class="modal-body">
                                             <?php                            
-                                            foreach($data as $dat) {                                                
+                                            foreach($dataC as $datC) {                                                
                                             ?>
-                                            <iframe src="../../../informatica/assets/calendario/<?php echo $dat['nombre'] ?>" frameborder="0"></iframe>
+                                            <iframe src="../../../informatica/assets/calendario/<?php echo $datC['nombre'] ?>" frameborder="0"></iframe>
                                             <?php } ?>
                                         </div>
                                         <div class="modal-footer">

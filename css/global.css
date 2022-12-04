@@ -651,3 +651,7 @@ from{
 .calendario{
     flex-direction: column;
 }
+.btnTem{
+    width: 100%;
+    margin: 10px;
+}

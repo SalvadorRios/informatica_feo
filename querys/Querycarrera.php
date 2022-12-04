@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 
 include('./../conexiones/conexion-list.php');
 $objeto = new Conexion();
@@ -26,10 +26,10 @@ $resultado4->execute();
 $data4=$resultado4->fetchAll(PDO::FETCH_ASSOC);
 
 
-echo 'ptm reacciona';
-foreach($data as $dat) { 
-echo $dat['titulo'];
-}
+// echo 'ptm reacciona';
+// foreach($data as $dat) { 
+// echo $dat['titulo'];
+// }
 
 // foreach($data2 as $dat2) { 
 // echo $dat2['id'];

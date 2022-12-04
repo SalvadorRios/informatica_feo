@@ -4,7 +4,7 @@
         
         <div class="col-6 displayCont">
             <?php
-                error_reporting(0);
+                // error_reporting(0);
                 if($_GET['Page']==null){
                     $i='none';
                 }else{
@@ -23,9 +23,9 @@
                         include_once (__DIR__ . "/alumCom/reincripcion.php");
                         
                     break;
-                    case 'Reticulas':
+                    case 'Reticula':
                         include_once (__DIR__ . "/alumCom/reticula.php");
-                    
+                        echo 'reticula';
                     break;
                     case 'Servicio':
                         include_once (__DIR__ . "/alumCom/servicio.php");
@@ -57,9 +57,6 @@
                     break;
                 }
             ?>
-            <!-- <h1><a href="#">HOLA MUNDO</a></h1> -->
-
         </div>
-        
     </div>    
 </div>
