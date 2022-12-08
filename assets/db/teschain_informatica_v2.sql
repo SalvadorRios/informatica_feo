@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2022 a las 00:47:07
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.2.34
+-- Tiempo de generación: 06-12-2022 a las 04:58:19
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `calendario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `calendario`
@@ -56,7 +56,7 @@ CREATE TABLE `carrera` (
   `ti_div5` varchar(60) NOT NULL,
   `ti_div6` varchar(60) NOT NULL,
   `cont_div6` varchar(1500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `carrera`
@@ -76,7 +76,7 @@ CREATE TABLE `carre_div2` (
   `sec` int(10) NOT NULL DEFAULT 102,
   `titulo` varchar(60) NOT NULL,
   `cont` varchar(1500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `carre_div2`
@@ -100,17 +100,18 @@ CREATE TABLE `carre_div3` (
   `id` int(10) NOT NULL,
   `sec` varchar(10) NOT NULL DEFAULT 'div3',
   `titulo` varchar(60) NOT NULL,
-  `cont` varchar(1500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `cont` varchar(1500) NOT NULL,
+  `img` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `carre_div3`
 --
 
-INSERT INTO `carre_div3` (`id`, `sec`, `titulo`, `cont`) VALUES
-(1, 'div3', 'PERFIL DE INGRESO', 'Con el fin de ir logrando una formación de profesionistas de excelencia en la Carrera de Ingeniería Informática, es indispensable que los aspirantes que consideren esta carrera reúnan un mínimo de habilidades, conocimientos, actitudes y valores que le garanticen su óptimo desempeño profesional a través de sus estudios y lo conduzcan a una segura integración en el ámbito profesional.'),
-(2, 'div3', 'CONOCIMIENTOS Y HABILIDADES', 'Capacidad de abstracción y análisis que le permita desarrollar sistemas de información de acuerdo con situaciones que se presentan en el sector productivo, empresas e instituciones.\r\n\r\nAutodidactismo. Crear el hábito de estudiar e investigar por sí solo.\r\n\r\nConocimientos Físico-Matemáticas en el nivel medio superior.\r\n\r\nConocimientos de carácter general en el campo de la computación en lo relativo a manejo y uso de la computadora, herramientas de ofimática y preferentemente conocimientos de programación.'),
-(3, 'div3', 'ACTITUDES Y VALORES', 'Disponibilidad para el estudio, lectura e investigación.\r\n\r\nCreatividad e innovación para el diseño y creación de sistemas de información.\r\n\r\nContar con responsabilidad y tenacidad, que le asegure la consolidación de sus proyectos.');
+INSERT INTO `carre_div3` (`id`, `sec`, `titulo`, `cont`, `img`) VALUES
+(1, 'div3', 'PERFIL DE INGRESO', 'Con el fin de ir logrando una formación de profesionistas de excelencia en la Carrera de Ingeniería Informática, es indispensable que los aspirantes que consideren esta carrera reúnan un mínimo de habilidades, conocimientos, actitudes y valores que le garanticen su óptimo desempeño profesional a través de sus estudios y lo conduzcan a una segura integración en el ámbito profesional.', 'pic01.jpg'),
+(2, 'div3', 'CONOCIMIENTOS Y HABILIDADES', 'Capacidad de abstracción y análisis que le permita desarrollar sistemas de información de acuerdo con situaciones que se presentan en el sector productivo, empresas e instituciones.\r\n\r\nAutodidactismo. Crear el hábito de estudiar e investigar por sí solo.\r\n\r\nConocimientos Físico-Matemáticas en el nivel medio superior.\r\n\r\nConocimientos de carácter general en el campo de la computación en lo relativo a manejo y uso de la computadora, herramientas de ofimática y preferentemente conocimientos de programación.', 'pic02.jpg'),
+(3, 'div3', 'ACTITUDES Y VALORES', 'Disponibilidad para el estudio, lectura e investigación.\r\n\r\nCreatividad e innovación para el diseño y creación de sistemas de información.\r\n\r\nContar con responsabilidad y tenacidad, que le asegure la consolidación de sus proyectos.', 'pic03.jpg');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,7 @@ CREATE TABLE `carre_div5` (
   `id` int(10) NOT NULL,
   `sec` varchar(10) NOT NULL DEFAULT 'div5',
   `cont` varchar(1500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `carre_div5`
@@ -155,7 +156,7 @@ CREATE TABLE `contacto` (
   `direc` varchar(600) NOT NULL,
   `tel` varchar(60) NOT NULL,
   `email` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `contacto`
@@ -178,7 +179,7 @@ CREATE TABLE `docentes` (
   `foto` varchar(100) NOT NULL,
   `file` varchar(100) NOT NULL,
   `modal` varchar(45) NOT NULL DEFAULT 'nombre'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `docentes`
@@ -207,7 +208,7 @@ CREATE TABLE `galeria_full` (
   `id` int(10) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `des` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `galeria_full`
@@ -233,7 +234,7 @@ CREATE TABLE `galeria_imp` (
   `id` int(10) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `des` varchar(700) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `galeria_imp`
@@ -259,7 +260,7 @@ CREATE TABLE `inicio` (
   `id` int(11) NOT NULL,
   `parrafo` varchar(1500) NOT NULL,
   `imagen` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `inicio`
@@ -278,7 +279,7 @@ CREATE TABLE `menu_alum` (
   `id` int(10) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `clave` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `menu_alum`
@@ -305,7 +306,7 @@ CREATE TABLE `recidencias` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `formato` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `recidencias`
@@ -331,7 +332,7 @@ CREATE TABLE `reticulas` (
   `titulo` varchar(45) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `clave` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `reticulas`
@@ -350,7 +351,7 @@ INSERT INTO `reticulas` (`id`, `titulo`, `nombre`, `clave`) VALUES
 CREATE TABLE `semestres` (
   `id` int(11) NOT NULL,
   `nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `semestres`
@@ -377,16 +378,16 @@ CREATE TABLE `temp_noveno` (
   `id` int(11) NOT NULL,
   `semestre` varchar(60) NOT NULL DEFAULT 'Noveno Semestre',
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `temp_noveno`
 --
 
 INSERT INTO `temp_noveno` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Noveno Semestre', 'GIB-2002 Gestión de Datos.pdf'),
-(2, 'Noveno Semestre', 'GIB-2003 Plataformas para el Análisis y Visualización de Datos.pdf'),
-(3, 'Noveno Semestre', 'GIB-2004 Seguridad Digital.pdf');
+(1, 'NovenoSemestre', 'GIB-2002 Gestión de Datos.pdf'),
+(2, 'NovenoSemestre', 'GIB-2003 Plataformas para el Análisis y Visualización de Datos.pdf'),
+(3, 'NovenoSemestre', 'GIB-2004 Seguridad Digital.pdf');
 
 -- --------------------------------------------------------
 
@@ -398,19 +399,19 @@ CREATE TABLE `tem_cuarto` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Cuarto Semestre',
   `nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_cuarto`
 --
 
 INSERT INTO `tem_cuarto` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Cuarto Semestre', 'AC009 Taller de Investigacion I.pdf'),
+(1, 'CuartoSemestre', 'AC009 Taller de Investigacion I.pdf'),
 (2, 'Cuarto Semestre', 'Administración y organización de datos.pdf'),
-(3, 'Cuarto Semestre', 'AE034 Fundamentos de Telecomunicaciones.pdf'),
-(4, 'Cuarto Semestre', 'AE061 Sistemas Operativos I.pdf'),
-(5, 'Cuarto Semestre', 'Arquitectura de Computadoras..pdf'),
-(6, 'Cuarto Semestre', 'Investigación de Operaciones.pdf');
+(3, 'CuartoSemestre', 'AE034 Fundamentos de Telecomunicaciones.pdf'),
+(4, 'CuartoSemestre', 'AE061 Sistemas Operativos I.pdf'),
+(5, 'CuartoSemestre', 'Arquitectura de Computadoras..pdf'),
+(6, 'CuartoSemestre', 'Investigación de Operaciones.pdf');
 
 -- --------------------------------------------------------
 
@@ -422,18 +423,18 @@ CREATE TABLE `tem_octavo` (
   `id` int(11) NOT NULL,
   `semestre` varchar(60) NOT NULL DEFAULT 'Octavo Semestre',
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_octavo`
 --
 
 INSERT INTO `tem_octavo` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Octavo Semestre', 'AE011 Desarrollo Aplicaciones Dispositivos Moviles.pdf'),
-(2, 'Octavo Semestre', 'Estrategias de gestión de servicios de tecnologías de información.pdf'),
-(3, 'Octavo Semestre', 'Inteligencia de Negocios..pdf'),
-(4, 'Octavo Semestre', 'Seguridad Informática..pdf'),
-(5, 'Octavo Semestre', 'Taller de emprendedores.pdf');
+(1, 'SeptimoSemestre', 'AE011 Desarrollo Aplicaciones Dispositivos Moviles.pdf'),
+(2, 'SeptimoSemestre', 'Estrategias de gestión de servicios de tecnologías de información.pdf'),
+(3, 'SeptimoSemestre', 'Inteligencia de Negocios..pdf'),
+(4, 'SeptimoSemestre', 'Seguridad Informática..pdf'),
+(5, 'SeptimoSemestre', 'Taller de emprendedores.pdf');
 
 -- --------------------------------------------------------
 
@@ -445,19 +446,19 @@ CREATE TABLE `tem_primero` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Primer Semestre',
   `nombre` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_primero`
 --
 
 INSERT INTO `tem_primero` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Primer Semestre', 'AC001 Calculo Diferencial.pdf'),
-(2, 'Primer Semestre', 'AC006 Fundamentos de Investigacion.pdf'),
-(3, 'Primer Semestre', 'AC007 Taller de Etica.pdf'),
-(4, 'Primer Semestre', 'AC008 Desarrollo Sustentable.pdf'),
-(5, 'Primer Semestre', 'Administración para informática.pdf'),
-(6, 'Primer Semestre', 'AE032 Fundamentos de Programacion.pdf');
+(1, 'PrimerSemestre', 'AC001 Calculo Diferencial.pdf'),
+(2, 'PrimerSemestre', 'AC006 Fundamentos de Investigacion.pdf'),
+(3, 'PrimerSemestre', 'AC007 Taller de Etica.pdf'),
+(4, 'PrimerSemestre', 'AC008 Desarrollo Sustentable.pdf'),
+(5, 'PrimerSemestre', 'Administración para informática.pdf'),
+(6, 'PrimerSemestre', 'AE032 Fundamentos de Programacion.pdf');
 
 -- --------------------------------------------------------
 
@@ -469,19 +470,19 @@ CREATE TABLE `tem_quinto` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Quinton Semestre',
   `nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_quinto`
 --
 
 INSERT INTO `tem_quinto` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Quinton Semestre', 'AE031 Fundamentos de Base de Datos.pdf'),
-(2, 'Quinton Semestre', 'AE062 Sistemas Operativos II.pdf'),
-(3, 'Quinton Semestre', 'Análisis y modelado de Sistemas de Información.pdf'),
-(4, 'Quinton Semestre', 'Redes de computadoras..pdf'),
-(5, 'Quinton Semestre', 'Taller de Legislación Informática.pdf'),
-(6, 'Quinton Semestre', 'Tecnologías e Interfaces de Computadoras..pdf');
+(1, 'QuintonSemestre', 'AE031 Fundamentos de Base de Datos.pdf'),
+(2, 'QuintonSemestre', 'AE062 Sistemas Operativos II.pdf'),
+(3, 'QuintonSemestre', 'Análisis y modelado de Sistemas de Información.pdf'),
+(4, 'QuintonSemestre', 'Redes de computadoras..pdf'),
+(5, 'QuintonSemestre', 'Taller de Legislación Informática.pdf'),
+(6, 'QuintonSemestre', 'Tecnologías e Interfaces de Computadoras..pdf');
 
 -- --------------------------------------------------------
 
@@ -493,19 +494,19 @@ CREATE TABLE `tem_segundo` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Segundo Semestre',
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_segundo`
 --
 
 INSERT INTO `tem_segundo` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Segundo Semestre', 'AC002 Calculo Integral.pdf'),
-(2, 'Segundo Semestre', 'Administración de los recursos y función informática.pdf'),
-(3, 'Segundo Semestre', 'AE008 Contabilidad Financiera.pdf'),
-(4, 'Segundo Semestre', 'AE041 Matematicas Discretas.pdf'),
-(5, 'Segundo Semestre', 'AE054 Programacion Orientada a Objetos.pdf'),
-(6, 'Segundo Semestre', 'Física para Informática.pdf');
+(1, 'SegundoSemestre', 'AC002 Calculo Integral.pdf'),
+(2, 'SegundoSemestre', 'Administración de los recursos y función informática.pdf'),
+(3, 'SegundoSemestre', 'AE008 Contabilidad Financiera.pdf'),
+(4, 'SegundoSemestre', 'AE041 Matematicas Discretas.pdf'),
+(5, 'SegundoSemestre', 'AE054 Programacion Orientada a Objetos.pdf'),
+(6, 'SegundoSemestre', 'Física para Informática.pdf');
 
 -- --------------------------------------------------------
 
@@ -517,21 +518,21 @@ CREATE TABLE `tem_septimo` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Septimo Semestre',
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_septimo`
 --
 
 INSERT INTO `tem_septimo` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Septimo Semestre', 'AC010 Taller de Investigacion II.pdf'),
-(2, 'Septimo Semestre', 'Administración de servidores..pdf'),
-(3, 'Septimo Semestre', 'Calidad en los Sistemas de Información.pdf'),
-(4, 'Septimo Semestre', 'Fundamentos gestión  servicios tecnologías información..pdf'),
-(5, 'Septimo Semestre', 'GID-2001 Gestión Informática Organizacional.pdf'),
-(6, 'Septimo Semestre', 'GID-2005 Evaluación de Software para Indicadores Organizacionales.pdf'),
-(7, 'Septimo Semestre', 'Programación en ambiente cliente servidor.pdf'),
-(8, 'Septimo Semestre', 'Tópicos de base de datos.pdf');
+(1, 'SeptimoSemestre', 'AC010 Taller de Investigacion II.pdf'),
+(2, 'SeptimoSemestre', 'Administración de servidores..pdf'),
+(3, 'SeptimoSemestre', 'Calidad en los Sistemas de Información.pdf'),
+(4, 'SeptimoSemestre', 'Fundamentos gestión  servicios tecnologías información..pdf'),
+(5, 'SeptimoSemestre', 'GID-2001 Gestión Informática Organizacional.pdf'),
+(6, 'SeptimoSemestre', 'GID-2005 Evaluación de Software para Indicadores Organizacionales.pdf'),
+(7, 'SeptimoSemestre', 'Programación en ambiente cliente servidor.pdf'),
+(8, 'SeptimoSemestre', 'Tópicos de base de datos.pdf');
 
 -- --------------------------------------------------------
 
@@ -543,18 +544,18 @@ CREATE TABLE `tem_sexto` (
   `id` int(11) NOT NULL,
   `semestre` varchar(45) NOT NULL DEFAULT 'Sexto Semestre',
   `nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_sexto`
 --
 
 INSERT INTO `tem_sexto` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Sexto Semestre', 'AE063 Taller de Base de Datos.pdf'),
-(2, 'Sexto Semestre', 'Auditoría Informática.pdf'),
-(3, 'Sexto Semestre', 'Desarrollo de Aplicaciones Web.pdf'),
-(4, 'Sexto Semestre', 'Desarrollo e implementación de Sistemas de Información.pdf'),
-(5, 'Sexto Semestre', 'Interconectividad de redes..pdf');
+(1, 'SextoSemestre', 'AE063 Taller de Base de Datos.pdf'),
+(2, 'SextoSemestre', 'Auditoría Informática.pdf'),
+(3, 'SextoSemestre', 'Desarrollo de Aplicaciones Web.pdf'),
+(4, 'SextoSemestre', 'Desarrollo e implementación de Sistemas de Información.pdf'),
+(5, 'SextoSemestre', 'Interconectividad de redes..pdf');
 
 -- --------------------------------------------------------
 
@@ -566,19 +567,19 @@ CREATE TABLE `tem_tercero` (
   `id` int(11) NOT NULL,
   `semestre` varchar(100) NOT NULL DEFAULT 'Tercer Semestre',
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tem_tercero`
 --
 
 INSERT INTO `tem_tercero` (`id`, `semestre`, `nombre`) VALUES
-(1, 'Tercer Semestre', 'AC003 Algebra Lineal.pdf'),
-(2, 'Tercer Semestre', 'AE026 Estructura de Datos.pdf'),
-(3, 'Tercer Semestre', 'AE052 Probabilidad y Estadistica.pdf'),
-(4, 'Tercer Semestre', 'Costos empresariales..pdf'),
-(5, 'Tercer Semestre', 'Fundamentos de Sistemas de Información.pdf'),
-(6, 'Tercer Semestre', 'Sistemas electrónicos para informática.pdf');
+(1, 'TercerSemestre', 'AC003 Algebra Lineal.pdf'),
+(2, 'TercerSemestre', 'AE026 Estructura de Datos.pdf'),
+(3, 'TercerSemestre', 'AE052 Probabilidad y Estadistica.pdf'),
+(4, 'TercerSemestre', 'Costos empresariales..pdf'),
+(5, 'TercerSemestre', 'Fundamentos de Sistemas de Información.pdf'),
+(6, 'TercerSemestre', 'Sistemas electrónicos para informática.pdf');
 
 --
 -- Índices para tablas volcadas

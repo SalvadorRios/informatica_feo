@@ -1,21 +1,66 @@
+<?php
+error_reporting(0);
+
+$subject = $_POST['correo'];// El valor entre corchetes son los atributos name del formulario html
+$msg = $_POST['mensaje'];
+$from = 'contacto@tescha-informatica.net';
+
+// El from DEBE corresponder a una cuenta de correo real creada en el servidor
+$headers = "From: contacto@tescha-informatica.net\r\n"; 
+$headers .= "Reply-To: $from\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=utf-8\r\n"; 
+	
+// if(mail($from, $subject, $msg,$headers)){
+// 	echo "mail enviado";
+// 	}else{
+// 	$errorMessage = error_get_last()['mensaje'];
+// 	echo $errorMessage;
+// }
+?>
+
 <div class="row contContact">
     <article class="col-md-12">
-            <h3 class="titulo">Información de contacto</h3>
+            <section id="banner">
+                <div class="inner">
+                    <?php foreach($data as $dat) { ?>
+                        <h2> <?php echo $dat['titulo'] ?> </h2>
+                    <?php } ?>
+                </div>
+            </section>
         <hr>
         <div class="contactoo" id="contactoo">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="address">
                         <h4 class="subTitulo">Dirección</h4>
-                        <p class="kontakto">Carretera Federal México Cuautla s/n,<br> La Candelaria Tlapala, Chalco, Edo. de México</p>
+                        <?php                            
+                            foreach($data as $dat) {                                                
+                        ?>
+                        <p class="kontakto"><?php echo $dat['direc'] ?></p>
+                        <?php                            
+                            }                                           
+                        ?>
                     </div>      
                     <div class="address">
                         <h4 class="subTitulo">Telefonos </h4>
-                        <p class="kontakto">01 55 5982 1088</p>
+                        <?php                            
+                            foreach($data as $dat) {                                                
+                        ?>
+                            <p class="kontakto"><?php echo $dat['tel'] ?></p>
+                        <?php                            
+                            }                                           
+                        ?>
                     </div>        
                     <div class="address">
                         <h4 class="subTitulo">Email</h4>
-                        <p class="kontakto">contacto@tescha-informatica.net</p>
+                        <?php                            
+                            foreach($data as $dat) {                                                
+                        ?>
+                            <p class="kontakto"><?php echo $dat['email'] ?></p>
+                        <?php                            
+                            }                                           
+                        ?>
                     </div>
                     <div class="redes">
                         <h4 class="subTitulo">Redes sociales</h4>
@@ -26,7 +71,7 @@
                     <br>
                 </div>
                 <div class="col-sm-6">
-                    <form action="mensaje.php" method="post" name="contact-form" id="main-contact-form">
+                    <form method="post" name="contact-form">
                         <div class="form-group">
                             <input class="contacto-input" type="text" required placeholder="Nombre" class="form-control" name="nombre">
                         </div>
@@ -44,7 +89,7 @@
     </article>
     <article class="col-md-12">
         <hr>
-            <h3 class="titulo">Ubicación</h3>
+            <h3 class="titulo kontakto">Ubicación</h3>
         <hr>
         <div class="row">
             <div class="col-sm-12">

@@ -42,7 +42,7 @@ form{
     margin: 15px;
 }
 .kontakto{
-    color:#000;
+    color:#000 !important;
 }
 .contactoo{
     font-size: 20px;
@@ -654,4 +654,7 @@ from{
 .btnTem{
     width: 100%;
     margin: 10px;
+}
+.contactColor{
+    color: black !important;
 }
