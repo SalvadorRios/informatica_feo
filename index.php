@@ -59,7 +59,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                         <?php                            
                             foreach($data as $dat) {                                                
                         ?>
-                            <img class="imgHome" src="../informatica/assets/img/docentes/<?php echo $dat['imagen'] ?>" alt="">
+                            <img class="imgHome" src="../informatica/assets/img/home/<?php echo $dat['imagen'] ?>" alt="">
                         <?php                            
                             }                                               
                         ?>

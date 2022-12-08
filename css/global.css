@@ -658,3 +658,8 @@ from{
 .contactColor{
     color: black !important;
 }
+/* formularios */
+.ContForm{
+    width: 80%;
+    margin: auto;
+}
