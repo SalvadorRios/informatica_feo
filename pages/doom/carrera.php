@@ -47,7 +47,7 @@
                 <section id="two" class="wrapper alt style2">
                     <?php foreach($data3 as $dat3) { ?>
                         <section class="spotlight">
-                            <div class="image"><img src="../../../../informatica/assets/img/default/<?php echo $dat3['img'] ?>" alt="" /></div>
+                            <div class="image"><img src="../../../informatica/assets/img/carrera/<?php echo $dat3['img'] ?>" alt="" /></div>
                             <div class="perfilIngreso content">
                                 <h2><?php echo $dat3['titulo'] ?></h2>
                                 <p class="textoCarrera"><?php echo $dat3['cont'] ?></p>

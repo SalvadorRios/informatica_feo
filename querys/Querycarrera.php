@@ -25,22 +25,4 @@ $resultado4 = $conexion->prepare($buscar4);
 $resultado4->execute();
 $data4=$resultado4->fetchAll(PDO::FETCH_ASSOC);
 
-
-// echo 'ptm reacciona';
-// foreach($data as $dat) { 
-// echo $dat['titulo'];
-// }
-
-// foreach($data2 as $dat2) { 
-// echo $dat2['id'];
-// }
-
-// foreach($data3 as $dat3) { 
-// echo $dat3['id'];
-// }
-
-// foreach($data4 as $dat4) { 
-// echo $dat4['id'];
-// }
-
 ?>

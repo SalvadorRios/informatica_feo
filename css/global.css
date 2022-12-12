@@ -663,3 +663,7 @@ from{
     width: 80%;
     margin: auto;
 }
+table{
+    width: 80% !important;
+    margin: auto !important;
+}

@@ -24,10 +24,10 @@
                 <a class="nav-link active" aria-current="page" href="../../../../informatica/pages/doom-admin/forms/form-home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Carrera</a>
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formCarrera.php">Carrera</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Docentes</a>
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formDocentes.php">Docentes</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Estudiantes</a>
