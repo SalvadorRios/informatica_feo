@@ -114,7 +114,7 @@ $ins23 = $con -> query ("UPDATE carre_div5 SET cont='$cont513' WHERE id=13 ");
 
 
 	echo "<script>
-    alert('Datos actualizados en el home');
+    alert('Datos actualizados en Carrera');
 	location.href='./../forms/formCarrera.php';
 	</script>";
 

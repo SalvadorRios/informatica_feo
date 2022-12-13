@@ -30,7 +30,7 @@
                 <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formDocentes.php">Docentes</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Estudiantes</a>
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formEstudiantes.php">Estudiantes</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Galeria</a>
@@ -39,7 +39,7 @@
                 <a class="nav-link" href="#">Investigacion</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formContacto.php">Contacto</a>
                 </li>
             </ul>
             </div>

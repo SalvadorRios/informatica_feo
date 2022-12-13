@@ -1,16 +1,16 @@
 <?php
 include '../../../conexiones/conexion.php';
 
-echo $nombre = $_POST['nombre'];
-echo $titulo = $_POST['titulo'];
-echo $correo = $_POST['correo'];
-echo $foto = $_FILES['foto']['name'];
-echo $cv = $_FILES['cv']['name'];
-echo $modal = $_POST['modal'];
-echo $id = $_POST['id'];
+$nombre = $_POST['nombre'];
+$titulo = $_POST['titulo'];
+$correo = $_POST['correo'];
+$foto = $_FILES['foto']['name'];
+$cv = $_FILES['cv']['name'];
+$modal = $_POST['modal'];
+$id = $_POST['id'];
 
-echo $fotoAnterior = $_POST['fotoAnterior'];
-echo $fileAnterior = $_POST['fileAnterior'];
+$fotoAnterior = $_POST['fotoAnterior'];
+$fileAnterior = $_POST['fileAnterior'];
 
 
 if($foto == '' && $cv == ''){
