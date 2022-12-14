@@ -25,7 +25,6 @@
                     break;
                     case 'Reticula':
                         include_once (__DIR__ . "/alumCom/reticula.php");
-                        echo 'reticula';
                     break;
                     case 'Servicio':
                         include_once (__DIR__ . "/alumCom/servicio.php");

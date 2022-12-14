@@ -4,7 +4,7 @@ include_once "./../vistas/header.php";
 include('./../../../conexiones/conexion-list.php');
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
-$buscar = "SELECT * FROM menu_alum";
+$buscar = "SELECT * FROM Reticulas";
 $resultado = $conexion->prepare($buscar);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -16,10 +16,11 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 <h1>Apartados de Estudiantes</h1>
         <thead>
             <tr>
-                <td>Id</td>
+                <td>Titulo</td>
                 <td>Nombre</td>
+                <td>Clave</td>
                 <td>Modificar</td>
-                
+                <td>Eliminar</td>
             </tr>
         </thead>   
         <tbody>
@@ -27,10 +28,11 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                     foreach($data as $dat) {                                                
                 ?>
                     <tr>
-                        <td><?php echo $dat['id'] ?></td>
+                        <td><?php echo $dat['titulo'] ?></td>
                         <td><?php echo $dat['nombre'] ?></td>
-                        <td><a class="btn btn-info" href="../forms/formUp<?php echo $dat['clave'] ?>.php" >Edit</a></td>
-                        
+                        <td><?php echo $dat['clave'] ?></td>
+                        <td><a class="btn btn-info" href="../forms/formReticula.php?id_user=<?php echo $dat['id'] ?>">Edit</a></td>
+                        <td><a class="btn btn-danger" href="../delete/deleteDocente.php?id_user=<?php echo $dat['id'] ?>" >Dell</a></td>  
                     </tr>
                 <?php                            
                     }                                          
