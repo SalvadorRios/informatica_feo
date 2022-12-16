@@ -12,7 +12,7 @@ $tipo = $_POST['tipo'];
 $formato = $_FILES['formato']['name'];
 
 if($formato == ''){
-    $ins2 = $con -> query ("UPDATE recidencias SET nombre='$nombre', formato='$anterior', clave='$clave', tipo='$tipo' ");
+    $ins2 = $con -> query ("UPDATE recidencias SET nombre='$nombre', formato='$anterior', clave='$clave', tipo='$tipo' where id='$id'");
 
 }else{
     echo 'esta lleno';
@@ -20,14 +20,14 @@ if($formato == ''){
           $directorio = $_SERVER['DOCUMENT_ROOT'].'/informatica/assets/formatosR/';
           // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
           move_uploaded_file($_FILES['formato']['tmp_name'],$directorio.$formato);
-    $ins2 = $con -> query ("UPDATE recidencias SET nombre='$nombre', formato='$formato', clave='$clave', tipo='$tipo' ");
+    $ins2 = $con -> query ("UPDATE recidencias SET nombre='$nombre', formato='$formato', clave='$clave', tipo='$tipo' where id='$id'");
 }
 
 
 if ($ins2) {
 	echo "<script>
-    alert('Datos actualizados en el home');
-	location.href='./../forms/formrecidenciascripcion.php';
+    alert('Datos actualizados en las recidencias');
+	location.href='./../forms/formUpRecidencias.php';
 	</script>";
 	}else {
 	  "<script>

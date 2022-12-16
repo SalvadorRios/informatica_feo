@@ -12,7 +12,7 @@ $tipo = $_POST['tipo'];
 $nombreArchivo = $_FILES['archivo']['name'];
 
 if($nombreArchivo == ''){
-    $ins2 = $con -> query ("UPDATE rein SET ti_but='$titulo', archivo='$anterior', clave='$clave', tipo='$tipo' ");
+    $ins2 = $con -> query ("UPDATE rein SET ti_but='$titulo', archivo='$anterior', clave='$clave', tipo='$tipo' where id='$id'");
 
 }else{
     echo 'esta lleno';
@@ -20,7 +20,7 @@ if($nombreArchivo == ''){
           $directorio = $_SERVER['DOCUMENT_ROOT'].'/informatica/assets/img/home/';
           // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
           move_uploaded_file($_FILES['archivo']['tmp_name'],$directorio.$nombreArchivo);
-    $ins2 = $con -> query ("UPDATE rein SET ti_but='$titulo', archivo='$nombreArchivo', clave='$clave', tipo='$tipo' ");
+    $ins2 = $con -> query ("UPDATE rein SET ti_but='$titulo', archivo='$nombreArchivo', clave='$clave', tipo='$tipo' where id='$id' ");
 }
 
 
