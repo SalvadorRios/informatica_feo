@@ -21,7 +21,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <td>Clave</td>
                 <td>Tipo</td>
                 <td>Modificar</td>
-                <td>Eliminar</td>
+
             </tr>
         </thead>   
         <tbody>
@@ -34,7 +34,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                         <td><?php echo $dat['clave'] ?></td>
                         <td><?php echo $dat['tipo'] ?></td>
                         <td><a class="btn btn-info" href="../forms/formReincripcion.php?id_user=<?php echo $dat['id'] ?>">Edit</a></td>
-                        <td><a class="btn btn-danger" href="../delete/deleteReinscripcion.php?id_user=<?php echo $dat['id'] ?>" >Dell</a></td>  
+                        
                     </tr>
                 <?php                            
                     }                                          

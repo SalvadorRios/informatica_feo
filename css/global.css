@@ -489,7 +489,7 @@ canvas {
 
     .flop {
         height:250px;
-        background: #91AA9D;
+        background: #2473db;
         -webkit-transform: rotateX(-90deg) translateZ(-70px);
         transform: rotateX(-90deg) translateZ(-70px);
     }
@@ -500,12 +500,13 @@ canvas {
     }
     img{
     width:100%;
+    height: 100% !important;
     /* heith */
     }
     #grid{
         min-height: 500px;
         /*-webkit-perspective: 700;*/
-        color: rgb(6, 106, 117);
+        color: rgb(255, 255, 255);
         text-transform: uppercase;
         font-size: 100%;
         /*background:#282828;*/
@@ -666,4 +667,15 @@ from{
 table{
     width: 80% !important;
     margin: auto !important;
+}
+.investigacion{
+    width: 80%;
+    margin: auto;
+}
+.autores{
+    margin-bottom: 5px;
+}
+.resumen{
+    height: 120px;
+    overflow-y: auto;
 }

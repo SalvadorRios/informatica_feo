@@ -12,7 +12,7 @@ $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<h3>Edit Docente</h3>
+<h3>Edit Reincripciones</h3>
 <div class="ContForm">
 
     <form action="./../updates/updateReinscripcion.php" method="POST" enctype="multipart/form-data">

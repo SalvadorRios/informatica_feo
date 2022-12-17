@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 
 include('./../conexiones/conexion-list.php');
 $objeto = new Conexion();

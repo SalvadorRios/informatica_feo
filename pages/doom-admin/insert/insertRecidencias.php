@@ -10,7 +10,7 @@ $tipo = $_POST['tipo'];
 $formato = $_FILES['formato']['name'];
 
     // Ruta donde se guardarán las imágenes que subamos
-    $directorio = $_SERVER['DOCUMENT_ROOT'].'/informatica/assets/formatosR/';
+    $directorio = $_SERVER['DOCUMENT_ROOT'].'/informatica/assets/img/galeriaFull/';
     // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
     move_uploaded_file($_FILES['formato']['tmp_name'],$directorio.$formato);
     $ins2 = $con -> query ("INSERT INTO recidencias VALUES('', '$nombre', '$formato', '$clave','$tipo')");
