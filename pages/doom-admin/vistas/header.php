@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header('location: ../index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +44,7 @@
                 <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formGaleria.php">Galeria</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Investigacion</a>
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/form-investigacion.php">Investigacion</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formContacto.php">Contacto</a>
