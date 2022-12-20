@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-12-2022 a las 07:28:11
+-- Tiempo de generación: 20-12-2022 a las 08:35:48
 -- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 7.4.33
+-- Versión de PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `teschain_informatica_v2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alum_default`
+--
+
+CREATE TABLE `alum_default` (
+  `id` int(11) NOT NULL,
+  `archivo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `alum_default`
+--
+
+INSERT INTO `alum_default` (`id`, `archivo`) VALUES
+(1, '1 ENCUENTRO DE INFORMÁTICA.jpg'),
+(2, '2 ENCUENTRO DE INFORMÁTICA.jpg'),
+(3, '3 ENCUENTRO DE INFORMÁTICA.jpg'),
+(4, '4 ENCUENTRO DE INFORMÁTICA.jpg'),
+(5, '5 ENCUENTRO DE INFORMÁTICA.jpg'),
+(6, '6 ENCUENTRO DE INFORMÁTICA.jpg'),
+(7, '7 ENCUENTRO DE INFORMÁTICA.jpg'),
+(8, '8 ENCUENTRO DE INFORMÁTICA.jpg');
 
 -- --------------------------------------------------------
 
@@ -186,17 +211,17 @@ CREATE TABLE `docentes` (
 --
 
 INSERT INTO `docentes` (`id`, `nombre`, `titulo`, `correo`, `foto`, `file`, `modal`) VALUES
-(1, 'Emmanuel Espinosa Sandoval', 'Licenciado en Informática', 'ing.espinosa@tescha-informatica.net', 'emmanuel.jpg', 'cv.pdf', 'emanuel'),
-(2, 'María del Rocío Gloria de Anda', 'Maestría en Educación en el Área de Docencia e Investigación', 'mdti.gloria@tescha-informatica.net', 'GLORIA DE ANDA.jpg', 'María del Rocío Gloria de Anda.pdf', 'gloria'),
-(3, 'Sandra Hernández Suárez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.hernandez@tescha-informatica.net', 'SANDRA.jpg', 'Sandra Hernández Suárez.pdf', 'sandra'),
-(4, 'Erika Leticia Herrera Revilla', 'Ingeniería en Electrónica', 'ing.herrera@tescha-informatica.net', 'ERIKA.jpg', 'cv.pdf', 'erika'),
-(5, 'Sergio Martínez Martrínez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.martinez@tescha-informatica.net', 'SERGIO.jpg', 'Sergio Martínez Martínes.pdf', 'sergio'),
-(6, 'Laura Morón Vázquez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.moron@tescha-informatica.net', 'LAURA.jpg', 'Laura Morón Vázquez.pdf', 'laura'),
-(7, 'Kevin Gyovani Ramírez Vite', 'Maestría en Docencia', 'mtro.ramirez@tescha-informatica.net', 'KEVIN.jpg', 'Kevin Gyovani Ramírez Vite.pdf', 'kevin'),
-(8, 'Raúl Romero Castro', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.romero@tescha-informatica.net', 'RAUL.jpg', 'cv.pdf', 'raul'),
-(9, 'Fabián Soberanes Martín', 'Maestría en Ciencias de la Computación', 'mtro.soberanes@tescha-informatica.net', 'FABIAN1.jpg', 'cv.pdf', 'fabian'),
-(10, 'Guadalupe Nayeli Villanueva Valdivia', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.villanueva@tescha-informatica.net', 'NAYELLI.jpg', 'Gaudalupe Nayeli Villanueva Valdivia.pdf', 'naye'),
-(11, 'Pablo Lázaro Hernández', 'Maestría en Docencia Científica y Tecnológica', 'mtro.lazaro@tescha-informatica.net', 'pablo.jpg', 'Pablo Lázaro Hérnandez.pdf', 'pablo');
+(1, 'Emmanuel Espinosa Sandoval', 'Licenciado en Informática', 'ing.espinosa@tescha-informatica.net', 'emmanuel.jpg', '', 'emanuel'),
+(2, 'Maria Del Rocio Gloria De Anda', 'Maestría en Educación en el Área de Docencia e Investigación', 'mdti.gloria@tescha-informatica.net', 'GLORIA DE ANDA.jpg', 'María del Rocío Gloria de Anda.pdf', 'gloria'),
+(3, 'Sandra Hernández Suárez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.hernandez@tescha-informatica.net', 'SANDRA.jpg', 'SandraHernandezSuarez.pdf', 'sandra'),
+(4, 'Erika Leticia Herrera Revilla', 'Ingeniería en Electrónica', 'ing.herrera@tescha-informatica.net', 'ERIKA.jpg', '', 'erika'),
+(5, 'Sergio Martínez Martrínez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.martinez@tescha-informatica.net', 'SERGIO.jpg', 'SergioMartinezMartines.pdf', 'sergio'),
+(6, 'Laura Morón Vázquez', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.moron@tescha-informatica.net', 'LAURA.jpg', 'LauraMoronVazquez.pdf', 'laura'),
+(7, 'Kevin Gyovani Ramírez Vite', 'Maestría en Docencia', 'mtro.ramirez@tescha-informatica.net', 'KEVIN.jpg', 'KevinGyovaniRamírezVite.pdf', 'kevin'),
+(8, 'Raúl Romero Castro', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.romero@tescha-informatica.net', 'RAUL.jpg', '', 'raul'),
+(9, 'Fabián Soberanes Martín', 'Maestría en Ciencias de la Computación', 'mtro.soberanes@tescha-informatica.net', 'FABIAN1.jpg', '', 'fabian'),
+(10, 'Guadalupe Nayeli Villanueva Valdivia', 'Maestría en Dirección de Tecnologías de la Información', 'mdti.villanueva@tescha-informatica.net', 'NAYELLI.jpg', 'GaudalupeNayeliVillanuevaValdivia.pdf', 'naye'),
+(11, 'Pablo Lázaro Hernández', 'Maestría en Docencia Científica y Tecnológica', 'mtro.lazaro@tescha-informatica.net', 'pablo.jpg', 'PabloLazaroHernandez.pdf', 'pablo');
 
 -- --------------------------------------------------------
 
@@ -253,6 +278,24 @@ INSERT INTO `galeria_imp` (`id`, `nombre`, `des`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `horario`
+--
+
+CREATE TABLE `horario` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `horario`
+--
+
+INSERT INTO `horario` (`id`, `nombre`) VALUES
+(1, 'HORARIOS 2022-2  (IINF).pdf');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `inicio`
 --
 
@@ -267,7 +310,31 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `parrafo`, `imagen`) VALUES
-(1, '', '');
+(1, 'Estimado estudiante\r\nTe doy la más cordial bienvenida a esta nueva etapa de tu vida estudiantil y que de\r\nmanera muy diferente afrontarás respecto al período de educación media superior que\r\nhas dejado recientemente. Ahora afrontarás un nuevo reto que en nueve semestres\r\nrecorrerás hasta convertirte en un profesionista capaz, ético y comprometido con la\r\nsociedad, con tu estado y con tu país.\r\nDeseo manifestar mi felicitación por tu decisión al haber elegido esta carrera, la cual te\r\nbrindará un enorme abanico de posibilidades en tu futuro desempeño profesional en el\r\námbito empresarial dentro del marco de las tecnologías de información y\r\ncomunicaciones TIC´s.\r\nPara ello, en el Tecnológico de Estudios Superiores de Chalco, dispondrás de una\r\ninfraestructura integral; compuesta por edificios con aulas interactivas, laboratorios de\r\ncómputo, centro de información (biblioteca), espacios comunes y deportivos, así como\r\náreas administrativas que facilitarán tu estancia y preparación en esta casa de\r\nestudios.\r\nSólo restará que a este engranaje tengamos asegurado tu compromiso, dedicación,\r\ndisposición, actitud y responsabilidad, constituyendo un excelente equipo colaborativo\r\ncon el cuerpo docente que en cada ciclo escolar fortalecerán el proceso\r\nenseñanza/aprendizaje logrando que concluyas con éxito el reto de convertirte en un\r\nprofesionista de alto desempeño.\r\nAtte. Lic. Marino Zúñiga Domínguez\r\nJefe de división de Ingeniería Informática', 'Marino.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `inves`
+--
+
+CREATE TABLE `inves` (
+  `id` int(11) NOT NULL,
+  `fecha` varchar(100) NOT NULL,
+  `titulo` varchar(300) NOT NULL,
+  `autores` varchar(300) NOT NULL,
+  `resumen` varchar(1000) NOT NULL,
+  `archivo` varchar(400) NOT NULL,
+  `clave` varchar(100) NOT NULL,
+  `tipo` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `inves`
+--
+
+INSERT INTO `inves` (`id`, `fecha`, `titulo`, `autores`, `resumen`, `archivo`, `clave`, `tipo`) VALUES
+(1, 'Received January 18, 2019; Accepted June 22, 2019', 'Sistema de recomendaciones como herramienta de inteligencia de negocios desarrollado en el cuaderno de Jupyter. Caso: selección de personal productivo', 'ROMERO, Raúl†, VILLANUEVA, Guadalupe, MARTÍNEZ, Sergio* and LÁZARO, Pablo', 'Los sistemas de recomendación son una herramienta \r\nútil en el proceso de toma de decisiones de una \r\norganización, ya que basan sus recomendaciones en \r\nmodelos matemáticos aplicados. Los sistemas de \r\nrecomendación históricos basados en la información \r\nde la organización permiten tomar decisiones aún \r\nmás precisas debido a la naturaleza personal de la \r\ninformación que los alimenta. Gracias a las diversas \r\ntecnologías de la información que existen, la creación \r\nde sistemas de recomendación personalizados de \r\nacuerdo con las necesidades de la organización es de \r\nrelativa facilidad. El propósito de este artículo es \r\nmostrar el procedimiento para crear y operar un \r\nsistema desarrollado en Jupyter Notebook como una \r\nherramienta de inteligencia empresarial que apoya la \r\ntoma de decisiones empresariales aplicada a un caso \r\nde selección de personal específico de la \r\norganización', 'Journal_Financial_Economy_V3_N4_4.pdf', 'sistemaDeRecomendacion', 'pdf');
 
 -- --------------------------------------------------------
 
@@ -286,15 +353,12 @@ CREATE TABLE `menu_alum` (
 --
 
 INSERT INTO `menu_alum` (`id`, `nombre`, `clave`) VALUES
-(1, 'Becas', 'Becas'),
 (2, 'Reincripciones', 'Reinscripcion'),
 (3, 'Recidencias', 'Recidencias'),
 (4, 'Reticula', 'Reticula'),
 (5, 'Calendario', 'Calendario'),
 (6, 'Temario', 'Temario'),
-(7, 'Organigrama', 'Organigrama'),
-(8, 'Actividades Complementarias', 'Actividades'),
-(9, 'Horarios', 'Horarios');
+(10, 'Horarios', 'Horarios');
 
 -- --------------------------------------------------------
 
@@ -605,9 +669,34 @@ INSERT INTO `tem_tercero` (`id`, `semestre`, `nombre`) VALUES
 (5, 'TercerSemestre', 'Fundamentos de Sistemas de Información.pdf'),
 (6, 'TercerSemestre', 'Sistemas electrónicos para informática.pdf');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `user`, `pass`) VALUES
+(1, 'salvador', 'pxndxmaye12');
+
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `alum_default`
+--
+ALTER TABLE `alum_default`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `calendario`
@@ -664,9 +753,21 @@ ALTER TABLE `galeria_imp`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `horario`
+--
+ALTER TABLE `horario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `inicio`
 --
 ALTER TABLE `inicio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `inves`
+--
+ALTER TABLE `inves`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -754,8 +855,20 @@ ALTER TABLE `tem_tercero`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `alum_default`
+--
+ALTER TABLE `alum_default`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `calendario`
@@ -797,7 +910,7 @@ ALTER TABLE `contacto`
 -- AUTO_INCREMENT de la tabla `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `galeria_full`
@@ -812,16 +925,28 @@ ALTER TABLE `galeria_imp`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT de la tabla `horario`
+--
+ALTER TABLE `horario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `inicio`
 --
 ALTER TABLE `inicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `inves`
+--
+ALTER TABLE `inves`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `menu_alum`
 --
 ALTER TABLE `menu_alum`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `recidencias`
@@ -900,6 +1025,12 @@ ALTER TABLE `tem_sexto`
 --
 ALTER TABLE `tem_tercero`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

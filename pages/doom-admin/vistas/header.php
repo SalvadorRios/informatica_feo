@@ -41,6 +41,9 @@
                 <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formEstudiantes.php">Estudiantes</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formBannerAlum.php">Banner Estudiantes</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="../../../../informatica/pages/doom-admin/forms/formGaleria.php">Galeria</a>
                 </li>
                 <li class="nav-item">
@@ -51,6 +54,7 @@
                 </li>
             </ul>
             </div>
+            <a class="navbar-brand" href="../../../../informatica/pages/doom-admin/backend/salir.php">Salir</a>
         </div>
     </nav>
 
