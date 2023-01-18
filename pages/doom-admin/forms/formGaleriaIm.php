@@ -15,7 +15,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 <h3>Edit Galeria</h3>
 <div class="ContForm">
 
-    <form action="./../updates/gal" method="POST" enctype="multipart/form-data">
+    <form action="./../updates/updateGaleria.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <?php                            
                 foreach($data as $dat) {                                                
