@@ -326,6 +326,9 @@ canvas {
     }
 }
 @media (max-width: 700px)  {
+    .showcase{
+        height: 830px !important; 
+    }
     .textoCarrera{
         text-align: justify;
         color:#fff;

@@ -33,7 +33,7 @@ $data2=$resultado2->fetchAll(PDO::FETCH_ASSOC);
                 ?>
                     <tr>
                         <td><?php echo $dat2['nombre'] ?></td>
-                        <td><a class="btn btn-info" href="../forms/?id_user=<?php echo $dat['id'] ?>">Edit</a></td>
+                        <td><a class="btn btn-info" href="../forms/formGaleriaIm.php?id_user=<?php echo $dat2['id'] ?>">Edit</a></td>
                     </tr>
                 <?php                            
                     }                                          
